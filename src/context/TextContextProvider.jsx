@@ -9,10 +9,6 @@ const TextContextProvider = ({ children }) => {
       : []
   );
 
-  useEffect(() => {
-    localStorage.setItem("texts", JSON.stringify(texts));
-  }, [texts]);
-
   const onAddText = (text) => {
     setTexts((prevTexts) => [...prevTexts, text]);
   };
