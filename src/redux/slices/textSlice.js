@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = localStorage.getItem("texts")
-  ? JSON.parse(localStorage.getItem("texts"))
-  : [];
-//   {
-//     data: JSON.parse(localStorage.getItem("texts")),
-//   };
+const initialState =
+  // {
+  //   data: localStorage.getItem("texts")
+  //     ? JSON.parse(localStorage.getItem("texts"))
+  //     : [],
+  // };
+  {
+    data: JSON.parse(localStorage.getItem("texts")),
+  };
 
 const textSlice = createSlice({
   name: "texts",
