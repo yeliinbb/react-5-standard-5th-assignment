@@ -5,10 +5,8 @@ import { useSelector } from "react-redux";
 
 function App() {
   // TODO: texts 를 context api 로 리팩터링 하세요.
-  const texts = useSelector((state) => {
-    return state.texts;
-  });
-  console.log(texts);
+  const texts = useSelector((state) => state.texts.data);
+  // console.log(texts.data);
   useEffect(() => {
     localStorage.setItem("texts", JSON.stringify(texts));
   }, [texts]);
