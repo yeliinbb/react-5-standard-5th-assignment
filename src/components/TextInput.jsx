@@ -13,8 +13,7 @@ function TextInput() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      dispatch(onAddText({ inputValue }));
-      console.log(dispatch(onAddText({ data: inputValue })));
+      dispatch(onAddText(inputValue));
       setInputValue("");
     }
   };
