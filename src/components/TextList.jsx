@@ -3,7 +3,7 @@ import { TextContext } from "../context/TextContextProvider";
 
 export default function TextList() {
   const { texts } = useContext(TextContext);
-  console.log(texts);
+  // console.log(texts);
   return (
     <ul>
       {texts.map((text, index) => (
