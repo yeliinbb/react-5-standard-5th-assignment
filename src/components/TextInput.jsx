@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { onAddText } from "../redux/slices/textSlice";
+import { addText } from "../redux/slices/textSlice";
 
 function TextInput() {
   const [inputValue, setInputValue] = useState("");
@@ -13,7 +13,8 @@ function TextInput() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      dispatch(onAddText(inputValue));
+      // dispatch 안에는 액션 객체가 들어간다.
+      dispatch(addText(inputValue));
       setInputValue("");
     }
   };
